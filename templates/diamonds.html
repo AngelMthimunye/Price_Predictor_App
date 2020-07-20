@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Price Predictor</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/diamond.css') }}" type="text/css">
+</head>
+<body>
+	<div class="page page-contact">
+		<div class="header">
+			<div>
+				<a id="logo"><img src="static/images/Diamond_Logo.jpg" alt="log"></a> <span>DIAMONDS</span>
+				
+			</div>
+		</div>
+		<div class="body">
+			<div class="contact">
+				<div>
+					<h4>Diamond Price Predictor</h4>
+				</div>
+				<form action="{{ url_for('predict')}}" method="post">
+					<p>
+    					The cost of a diamond depends on its features. Enter the features of your diamond and CLICK PREDICT PRICE.     							    				
+					</p>
+    					<h4>{{ prediction_text }} </h4>
+					<!-- <input type="text" name="carat"  onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'Carat (weight of the diamond)':this.value;" value="Carat (weight of the diamond)" required="required" />-->
+					<input type="text" name="carat" placeholder="Carat (weight of the diamond)" required="required"/>
+					<label for="cut">Select Cut Type:</label>
+                      <select id="cut" name="cut">
+                        <option value="0">Fair</option>
+                        <option value="1">Good</option>
+                        <option value="4">Very Good</option>
+                        <option value="3">Premium</option>
+                        <option value="2">Ideal</option>
+                      </select>				    
+					</br>
+					</br>
+					<label for="color">Select Color Type:</label>
+                      <select id="color" name="color">
+                        <option value="6">J</option>
+                        <option value="5">I</option>
+                        <option value="4">H</option>
+                        <option value="3">G</option>
+                        <option value="2">F</option>
+                        <option value="1">E</option>
+                        <option value="0">D</option>
+                      </select>
+                    </br>
+                    </br>
+                    <label for="clarity">Select Clarity Type:</label>
+                      <select id="clarity" name="clarity">
+                        <option value="0">l1</option>
+                        <option value="3">Sl2</option>
+                        <option value="2">Sl1</option>
+                        <option value="5">VS2</option>
+                        <option value="4">VS1</option>
+                        <option value="7">VVS2</option>
+                        <option value="6">VVS1</option>
+                        <option value="1">lF</option>
+                      </select>     
+                    </br>
+                    </br>
+                	<input type="text" name="length" placeholder="Length mm" required="required" />
+                	<input type="text" name="width" placeholder="Width mm" required="required" />
+                   	<input type="text" name="depth" placeholder="Depth mm" required="required" />
+					<input type="submit" value="PREDICT PRICE" class="btn3">
+				</form>
+				
+			</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
