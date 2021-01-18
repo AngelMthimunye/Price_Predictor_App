@@ -1,2 +1,4 @@
 # Price_Predictor_App
-This repository is used to implement a Price Predictor App
+Data Analysis and Machine Learning: Diamonds.ipynb
+App Development: diamond_app.py
+Data: diamonds.csv
